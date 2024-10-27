@@ -1,13 +1,13 @@
 ## steps:
-1. In your virtual environment, download the required packages shown in the requirements.txt
+1. In your virtual environment, download the required packages 
 2. Generate captcha with your fonts:
-   - Place your two primary fonts in the train_font folder.
-   - Place additional fonts for mixing in the mix_font folder.
+   - place your two primary fonts in the train_font folder
+   - place additional fonts for mixing in the mix_font folder
    - run on clt: 
    ```shell
    mkdir [your_output_data_dir]
    python generate.py --font_dir train_font --[max_len(captchas will be 2-max_len length)] --count [font1_generate_number] [font2_generate_number] --output_dir [your_output_data_dir] --symbols symbols.txt --mix_dir mix_font --mix_count [number of mix font generation] --train_ratio [train/val split ratio between 0 and 1]
-    ```
+   ```
 
 3. Train yolo model with your generated dataset
    - run on clt: 
@@ -25,4 +25,3 @@
    ```
    -  "-save_plot" is to save the visualization images of the prediction
    - your .csv file will be saved under [your_output_folder_path]
-   
